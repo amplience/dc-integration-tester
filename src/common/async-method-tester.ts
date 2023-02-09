@@ -13,7 +13,7 @@ const keyRename = {
 
 function resultSummary(result: any): string {
     if (Array.isArray(result)) {
-        return result.length.toString();
+        return result.length.toString() + ' items';
     } else {
         return Object.keys(result).length + ' properties';
     }
@@ -54,6 +54,9 @@ export default async function asyncMethodTester<T extends ConfigArgs>(method: (a
                 NUMBER_LITERAL: '#AE81FF'
             }
         }));
+
+        console.log();
+        console.log(`Printed ${resultSummary(result)}.`);
 
         if (argv.out) {
             await writeFile(argv.out, resultJson, { encoding: 'utf8' });
