@@ -2,6 +2,29 @@
 
 This tool is useful for testing integrations with dc-demostore-integration and the credentials for them. Integrations are located at `./integrations.json` or `$HOME/.amplience/integrations.json` and should contain a JSON object with keys for each vendor configuration.
 
+```json
+{
+    "commercetools": {
+        "vendor": "commercetools",
+        "project": "-",
+        "client_id": "-",
+        "client_secret": "-",
+        "auth_url": "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+        "api_url": "https://api.europe-west1.gcp.commercetools.com",
+        "scope": "-"
+    },
+
+    "sfcc": {
+        "vendor": "sfcc",
+        "api_url": "-",
+        "auth_url": "https://account.demandware.com/dwsso/oauth2/access_token",
+        "client_id": "-",
+        "client_secret": "-",
+        "site_id": "-"
+    }
+}
+```
+
 ## Use
 - `nvm use`
 - `npm i`
