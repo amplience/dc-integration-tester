@@ -28,7 +28,6 @@ const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
                 .showHelpOnFail(false)
                 .fail(failFn).argv;
             resolve(argv);
-            process.exit();
         }
     );
 };
