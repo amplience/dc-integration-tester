@@ -1,10 +1,10 @@
 {
-  "name": "dc-integraton-tester",
+  "name": "dc-integration-tester",
   "version": "1.0.0",
   "description": "CLI for testing dc-demostore-integration codecs",
   "main": "./dist/index.js",
   "bin": {
-    "dc-cli": "./dist/index.js"
+    "dc-integration-tester": "./dist/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
