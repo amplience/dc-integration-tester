@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@amplience/dc-demostore-integration": "file:../dc-demostore-integration",
+    "@amplience/dc-demostore-integration": "git+https://github.com/amplience/dc-demostore-integration.git#dev",
     "chalk": "^4",
     "cli-spinners": "^2.7.0",
     "json-colorizer": "^2.2.2",
