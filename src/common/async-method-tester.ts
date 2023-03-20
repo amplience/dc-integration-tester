@@ -5,7 +5,7 @@ import ora from 'ora';
 import { ConfigArgs } from './config';
 import { writeFile } from 'fs/promises';
 
-const ignoreList = ['config', 'vendor', '_', 'out'];
+const ignoreList = ['config', 'vendor', '_', 'out', '$0'];
 const keyRename = {
     $0: 'vendor',
     $1: 'argument',
@@ -14,8 +14,10 @@ const keyRename = {
 function resultSummary(result: any): string {
     if (Array.isArray(result)) {
         return result.length.toString() + ' items';
-    } else {
+    } else if (typeof result === 'object' && result != null) {
         return Object.keys(result).length + ' properties';
+    } else {
+        return 'Literal';
     }
 }
 
