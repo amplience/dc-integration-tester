@@ -5,12 +5,20 @@ import ora from 'ora';
 import { ConfigArgs } from './config';
 import { writeFile } from 'fs/promises';
 
+// TODO
 const ignoreList = ['config', 'vendor', '_', 'out', '$0'];
+
+// TODO
 const keyRename = {
     $0: 'vendor',
     $1: 'argument',
 } as any;
 
+/**
+ * TODO
+ * @param result 
+ * @returns 
+ */
 function resultSummary(result: any): string {
     if (Array.isArray(result)) {
         return result.length.toString() + ' items';
@@ -21,6 +29,12 @@ function resultSummary(result: any): string {
     }
 }
 
+/**
+ * TODO
+ * @param method 
+ * @param name 
+ * @param argv 
+ */
 export default async function asyncMethodTester<T extends ConfigArgs>(method: (args: T) => Promise<any>, name: string, argv: T) {
     console.log('');
     console.log(chalk.inverse(` ${name} `));

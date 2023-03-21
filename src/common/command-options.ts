@@ -1,5 +1,6 @@
 import { Options } from 'yargs';
 
+// TOOD
 export const commonCommandOptions = {
     locale: { type: 'string' } as Options,
     language: { type: 'string' } as Options,

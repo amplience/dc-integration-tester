@@ -8,8 +8,15 @@ export const command = 'get-category <vendor> <slug>';
 
 export const desc = 'Gets a category from the given vendor';
 
+/**
+ * TODO
+ */
 type GetCategoryArgs = CommonArgs & GetCommerceObjectArgs & ConfigArgs
 
+/**
+ * TODO
+ * @param yargs 
+ */
 export const builder = (yargs: Argv): void => {
   yargs
     .options(commonCommandOptions)
@@ -23,6 +30,11 @@ export const builder = (yargs: Argv): void => {
     })
 };
 
+/**
+ * TODO
+ * @param argv 
+ * @returns 
+ */
 export const handler = async (argv: Arguments<GetCategoryArgs>): Promise<void> => {
     const config = await getConfig(argv.vendor);
 

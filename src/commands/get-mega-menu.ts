@@ -8,8 +8,15 @@ export const command = 'get-mega-menu <vendor>';
 
 export const desc = 'Gets the mega menu from the given vendor';
 
+/**
+ * TODO
+ */
 type GetMegaMenuArgs = CommonArgs & ConfigArgs
 
+/**
+ * TODO
+ * @param yargs 
+ */
 export const builder = (yargs: Argv): void => {
   yargs
     .options(commonCommandOptions)
@@ -19,6 +26,11 @@ export const builder = (yargs: Argv): void => {
     })
 };
 
+/**
+ * TODO
+ * @param argv 
+ * @returns 
+ */
 export const handler = async (argv: Arguments<GetMegaMenuArgs>): Promise<void> => {
     const config = await getConfig(argv.vendor);
 

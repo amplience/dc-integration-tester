@@ -8,8 +8,15 @@ export const command = 'get-customer-groups <vendor>';
 
 export const desc = 'Gets customer groups from the given vendor';
 
+/**
+ * TODO
+ */
 type GetCustomerGroupsArgs = CommonArgs & ConfigArgs
 
+/**
+ * TODO
+ * @param yargs 
+ */
 export const builder = (yargs: Argv): void => {
   yargs
     .options(commonCommandOptions)
@@ -19,6 +26,11 @@ export const builder = (yargs: Argv): void => {
     })
 };
 
+/**
+ * TODO
+ * @param argv 
+ * @returns 
+ */
 export const handler = async (argv: Arguments<GetCustomerGroupsArgs>): Promise<void> => {
     const config = await getConfig(argv.vendor);
 

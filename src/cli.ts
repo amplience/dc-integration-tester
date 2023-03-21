@@ -1,8 +1,14 @@
 import Yargs from 'yargs';
 import { Arguments, Argv } from 'yargs';
 
+// TODO
 const YargsCommandBuilderOptions: Yargs.RequireDirectoryOptions = { extensions: ['ts', 'js'], exclude: /\.spec\.ts$/ };
 
+/**
+ * TODO
+ * @param yargInstance 
+ * @returns 
+ */
 const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
     return new Promise(
         async (resolve): Promise<void> => {
@@ -32,6 +38,9 @@ const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
     );
 };
 
+/**
+ * TODO
+ */
 export default async (yargInstance = Yargs(process.argv.slice(2))): Promise<Arguments | void> => {
     return await configureYargs(yargInstance);
 };

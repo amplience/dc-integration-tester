@@ -9,6 +9,9 @@ export const command = 'get-products <vendor>';
 
 export const desc = 'Gets a products from the given vendor';
 
+/**
+ * TODO
+ */
 type GetProductsCommandArgs = CommonArgs & GetProductsArgs & ConfigArgs
 
 export const getProductsCommandOptions = {
@@ -17,6 +20,10 @@ export const getProductsCommandOptions = {
     keyword: { type: 'string', description: 'Keyword to search for products.' } as Options
 }
 
+/**
+ * TODO
+ * @param yargs 
+ */
 export const builder = (yargs: Argv): void => {
   yargs
     .options(getProductsCommandOptions)
@@ -26,6 +33,11 @@ export const builder = (yargs: Argv): void => {
     })
 };
 
+/**
+ * TODO
+ * @param argv 
+ * @returns 
+ */
 export const handler = async (argv: Arguments<GetProductsCommandArgs>): Promise<void> => {
     if (argv.keyword == null && argv.productIds == null) {
         console.log(chalk.red('Either keyword or productIds must be provided.'))
