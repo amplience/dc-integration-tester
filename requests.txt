@@ -1,6 +1,6 @@
 
 > dc-integraton-tester@1.0.0 dev /Users/rsimpson/Documents/amplience/dc-integraton-tester
-> ts-node ./src/index.ts "get-mega-menu" "commercetools"
+> ts-node ./src/index.ts "get-category-tree" "commercetools"
 
 [ demostore ] creating codec: commercetools...
 ============== REQUEST ==============
@@ -14360,6 +14360,6 @@ GET /categories?offset=0&limit=500
 ============== RESPONSE ==============
 undefined
 IntegrationError {
-  message: 'megaMenu has no categories, cannot build navigation',
+  message: 'categoryTree has no categories, cannot build navigation',
   helpUrl: ''
 }
