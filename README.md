@@ -6,21 +6,51 @@ This tool is useful for testing integrations with dc-demostore-integration and t
 {
 	"commercetools": {
 		"vendor": "commercetools",
-		"project": "-",
-		"client_id": "-",
-		"client_secret": "-",
-		"auth_url": "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-		"api_url": "https://api.europe-west1.gcp.commercetools.com",
-		"scope": "-"
+		"codec_params": {
+			"project": "<ct project key>",
+			"client_id": "<ct client id>",
+			"client_secret": "<ct client secret>",
+			"auth_url": "<ct auth url",
+			"api_url": "<ct api url>",
+			"scope": "<list of scopes>"
+		}
 	},
 
 	"sfcc": {
 		"vendor": "sfcc",
-		"api_url": "-",
-		"auth_url": "https://account.demandware.com/dwsso/oauth2/access_token",
-		"client_id": "-",
-		"client_secret": "-",
-		"site_id": "-"
+		"codec_params": {
+			"api_url": "<sfcc api url>",
+			"auth_url": "<sfcc auth url>",
+			"site_id": "<sfcc site id>",
+			"client_id": "<sfcc client id>",
+			"client_secret": "<sfcc site secret>"
+		}
+	},
+	"bigcommerce": {
+		"vendor": "bigcommerce",
+		"codec_params": {
+			"api_url": "<bigcommerce api url>",
+			"api_token": "<bigcommerce api token>",
+			"store_hash": "<bigcommerce store hash>"
+		}
+	},
+	"rest": {
+		"vendor": "rest",
+		"codec_params": {
+			"productURL": "https://demostore-catalog.s3.us-east-2.amazonaws.com/products.json",
+			"categoryURL": "https://demostore-catalog.s3.us-east-2.amazonaws.com/categories.json",
+			"customerGroupURL": "https://demostore-catalog.s3.us-east-2.amazonaws.com/customerGroups.json",
+			"translationsURL": "https://demostore-catalog.s3.us-east-2.amazonaws.com/translations.json"
+		}
+	},
+	"shopify": {
+		"vendor": "shopify",
+		"codec_params": {
+			"access_token": "<storefront access token>",
+			"admin_access_token": "<admin access token>",
+			"version": "<api version, eg. 2023-01>",
+			"site_id": "<shopify site id>"
+		}
 	}
 }
 ```
