@@ -1,6 +1,6 @@
 import { Options } from 'yargs';
 
-// TODO
+// Options shared between all commands.
 export const commonCommandOptions = {
     locale: { type: 'string' } as Options,
     language: { type: 'string' } as Options,

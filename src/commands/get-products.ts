@@ -10,7 +10,7 @@ export const command = 'get-products <vendor>';
 export const desc = 'Gets a products from the given vendor';
 
 /**
- * TODO
+ * Arguments for get-products command.
  */
 type GetProductsCommandArgs = CommonArgs & GetProductsArgs & ConfigArgs
 
@@ -21,8 +21,8 @@ export const getProductsCommandOptions = {
 }
 
 /**
- * TODO
- * @param yargs 
+ * Command builder for get-products.
+ * @param yargs Arguments
  */
 export const builder = (yargs: Argv): void => {
   yargs
@@ -34,9 +34,9 @@ export const builder = (yargs: Argv): void => {
 };
 
 /**
- * TODO
- * @param argv 
- * @returns 
+ * Get Products from the specified vendor.
+ * @param argv Command arguments
+ * @returns Void when completed
  */
 export const handler = async (argv: Arguments<GetProductsCommandArgs>): Promise<void> => {
     if (argv.keyword == null && argv.productIds == null) {

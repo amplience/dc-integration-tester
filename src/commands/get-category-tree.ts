@@ -9,13 +9,13 @@ export const command = 'get-category-tree <vendor>';
 export const desc = 'Gets the category tree from the given vendor';
 
 /**
- * TODO
+ * Arguments for get-category-tree command.
  */
 type GetCategoryTreeArgs = CommonArgs & ConfigArgs
 
 /**
- * TODO
- * @param yargs 
+ * Command builder for get-category-tree.
+ * @param yargs Arguments
  */
 export const builder = (yargs: Argv): void => {
   yargs
@@ -27,9 +27,9 @@ export const builder = (yargs: Argv): void => {
 };
 
 /**
- * TODO
- * @param argv 
- * @returns 
+ * Get Category Tree from the specified vendor.
+ * @param argv Command arguments
+ * @returns Void when completed
  */
 export const handler = async (argv: Arguments<GetCategoryTreeArgs>): Promise<void> => {
     const config = await getConfig(argv.vendor);

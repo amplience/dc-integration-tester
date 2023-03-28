@@ -6,7 +6,7 @@ import chalk from 'chalk'
 const configName = 'integrations.json';
 
 /**
- * TODO
+ * Configuration arguments.
  */
 export type ConfigArgs = {
     vendor: string;
@@ -14,10 +14,10 @@ export type ConfigArgs = {
 };
 
 /**
- * TODO
- * @param vendor 
- * @param config 
- * @returns 
+ * Get the configuration for the specific vendor from a config object.
+ * @param vendor The vendor name
+ * @param config The config object
+ * @returns The configuration for the specified vendor, or undefined
  */
 function getVendorConfig(vendor: string, config: any): any {
     const vendorConfig = config[vendor];
@@ -30,7 +30,8 @@ function getVendorConfig(vendor: string, config: any): any {
 }
 
 /**
- * TODO
+ * Get the config for a specific vendor from the integrations.json file, either locally or in the .amplience folder.
+ * @argument vendor Vendor name to get config for
  */
 export default async function getConfig(vendor: string): Promise<object | undefined> {
     // Try find a config file in a relative path, otherwise try in the .amplience folder.

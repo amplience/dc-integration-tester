@@ -57,18 +57,39 @@ This tool is useful for testing integrations with dc-demostore-integration and t
 
 ## Use
 
--   `nvm use`
+-   `nvm use` (or `nvm use 14` on windows)
 -   `npm i`
 -   `npm run build`
 -   `npm link`
 -   `dc-integration-tester <arguments>`
     -   Just run `dc-integration-tester` to get a list of commands. Use `--help` to get help with any command.
 
+### Commands
+```
+dc-integration-tester <command>
+
+Commands:
+  dc-integration-tester get-category-tree   Gets the category tree from the
+  <vendor>                                  given vendor
+  dc-integration-tester get-category        Gets a category from the given
+  <vendor> <slug>                           vendor
+  dc-integration-tester                     Gets customer groups from the given
+  get-customer-groups <vendor>              vendor
+  dc-integration-tester get-product         Gets a product from the given vendor
+  <vendor> <id>
+  dc-integration-tester get-products        Gets a products from the given
+  <vendor>                                  vendor
+
+Options:
+  --help     Show help                                                 [boolean]
+  --version  Show version number                                       [boolean]
+```
+
 ## Development
 
 When using this tool to aid in the development of demostore integrations, do the following:
 
--   `nvm use`
+-   `nvm use` (or `nvm use 14` on windows)
 -   `npm i`
 -   `npm i .../dc-demostore-integration`
     -   ...or whatever the local path is to the dc-demostore-integration.

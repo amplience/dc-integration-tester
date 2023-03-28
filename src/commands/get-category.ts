@@ -9,13 +9,13 @@ export const command = 'get-category <vendor> <slug>';
 export const desc = 'Gets a category from the given vendor';
 
 /**
- * TODO
+ * Arguments for get-category command.
  */
 type GetCategoryArgs = CommonArgs & GetCommerceObjectArgs & ConfigArgs
 
 /**
- * TODO
- * @param yargs 
+ * Command builder for get-category.
+ * @param yargs Arguments
  */
 export const builder = (yargs: Argv): void => {
   yargs
@@ -31,9 +31,9 @@ export const builder = (yargs: Argv): void => {
 };
 
 /**
- * TODO
- * @param argv 
- * @returns 
+ * Get a category from the specified vendor.
+ * @param argv Command arguments
+ * @returns Void when completed
  */
 export const handler = async (argv: Arguments<GetCategoryArgs>): Promise<void> => {
     const config = await getConfig(argv.vendor);

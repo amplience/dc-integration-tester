@@ -1,13 +1,13 @@
 import Yargs from 'yargs';
 import { Arguments, Argv } from 'yargs';
 
-// TODO
+// Filter for files to scan and include as commands.
 const YargsCommandBuilderOptions: Yargs.RequireDirectoryOptions = { extensions: ['ts', 'js'], exclude: /\.spec\.ts$/ };
 
 /**
- * TODO
- * @param yargInstance 
- * @returns 
+ * Configure yargs to provide the integration tester commands.
+ * @param yargInstance Yargs instance
+ * @returns Arguments
  */
 const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
     return new Promise(
@@ -39,7 +39,7 @@ const configureYargs = (yargInstance: Argv): Promise<Arguments> => {
 };
 
 /**
- * TODO
+ * Main CLI entrypoint.
  */
 export default async (yargInstance = Yargs(process.argv.slice(2))): Promise<Arguments | void> => {
     return await configureYargs(yargInstance);

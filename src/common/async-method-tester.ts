@@ -5,19 +5,19 @@ import ora from 'ora';
 import { ConfigArgs } from './config';
 import { writeFile } from 'fs/promises';
 
-// TODO
+// Properties to ignore when printing the list of arguments.
 const ignoreList = ['config', 'vendor', '_', 'out', '$0'];
 
-// TODO
+// Properties to rename when printing the list of arguments.
 const keyRename = {
     $0: 'vendor',
     $1: 'argument',
 } as any;
 
 /**
- * TODO
- * @param result 
- * @returns 
+ * Generate a summary of a result, regardless of type.
+ * @param result Result to summarize
+ * @returns Summary of the result
  */
 function resultSummary(result: any): string {
     if (Array.isArray(result)) {
@@ -30,10 +30,10 @@ function resultSummary(result: any): string {
 }
 
 /**
- * TODO
- * @param method 
- * @param name 
- * @param argv 
+ * Run a given async method with arguments, and output to log all inputs, outputs and progress updates.
+ * @param method Async method to run
+ * @param name Name of the method
+ * @param argv Arguments object to pass to the method
  */
 export default async function asyncMethodTester<T extends ConfigArgs>(method: (args: T) => Promise<any>, name: string, argv: T) {
     console.log('');
