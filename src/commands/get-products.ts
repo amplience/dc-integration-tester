@@ -1,4 +1,4 @@
-import { getCommerceAPI, CommonArgs, GetProductsArgs } from '@amplience/dc-demostore-integration';
+import { getCommerceAPI, CommonArgs, GetProductsArgs } from '@amplience/dc-integration-middleware';
 import { Argv, Arguments, Options } from 'yargs';
 import asyncMethodTester from '../common/async-method-tester';
 import getConfig, { ConfigArgs } from '../common/config';

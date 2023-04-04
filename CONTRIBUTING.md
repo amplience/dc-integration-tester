@@ -2,7 +2,7 @@
 
 ## Developing for dc-integration-tester
 
-Developing for dc-integration-tester generally comes in the form of adding new commands or improving existing ones. These normally map to methods in codecs in the `dc-demostore-integration` project, though you could add additional helper methods that combine commands or perform other tasks.
+Developing for dc-integration-tester generally comes in the form of adding new commands or improving existing ones. These normally map to methods in codecs in the `dc-integration-middleware` project, though you could add additional helper methods that combine commands or perform other tasks.
 Please consider these guidelines when filing a pull request:
 
 *  4 space indentation.

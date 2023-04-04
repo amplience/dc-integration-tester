@@ -1,6 +1,6 @@
 # dc-integration-tester
 
-This tool is useful for testing integrations with dc-demostore-integration and the credentials for them. Integrations are located at `./integrations.json` or `$HOME/.amplience/integrations.json` and should contain a JSON object with keys for each vendor configuration.
+This tool is useful for testing integrations with dc-integration-middleware and the credentials for them. Integrations are located at `./integrations.json` or `$HOME/.amplience/integrations.json` and should contain a JSON object with keys for each vendor configuration.
 
 ```json
 {
@@ -91,8 +91,8 @@ When using this tool to aid in the development of demostore integrations, do the
 
 -   `nvm use` (or `nvm use 14` on windows)
 -   `npm i`
--   `npm i .../dc-demostore-integration`
-    -   ...or whatever the local path is to the dc-demostore-integration.
+-   `npm i .../dc-integration-middleware`
+    -   ...or whatever the local path is to the dc-integration-middleware.
     -   Whenever you make any changes to the demostore integrations, make sure you `npm run build` on that project.
 -   `npm run dev -- <arguments>`
     -   Run a command without building and linking.
