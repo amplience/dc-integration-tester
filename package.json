@@ -20,7 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@amplience/dc-integration-middleware": "git+https://github.com/amplience/dc-integration-middleware.git",
+    "@amplience/dc-integration-middleware": "file:../dc-demostore-integration",
     "chalk": "^4",
     "cli-spinners": "^2.7.0",
     "json-colorizer": "^2.2.2",
