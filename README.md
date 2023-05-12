@@ -57,7 +57,7 @@ This tool is useful for testing integrations with dc-integration-middleware and 
 
 ## Use
 
--   `nvm use` (or `nvm use 14` on windows)
+-   `nvm use` (or `nvm use 16` on windows)
 -   `npm i`
 -   `npm run build`
 -   `npm link`
