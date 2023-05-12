@@ -30,6 +30,26 @@ function resultSummary(result: any): string {
 }
 
 /**
+ * Gets page info from arguments after a paginated request.
+ * @param argV Method arguments
+ * @returns Page info returned from the request
+ */
+function getPageInfo(argV: any){
+    const pageInfo = {} as any;
+
+	if (argV.pageSize != null) pageInfo.pageSize = argV.pageSize;
+	if (argV.cursor != null) pageInfo.cursor = argV.cursor;
+	if (argV.cursorPage != null) pageInfo.cursorPage = argV.cursorPage;
+	if (argV.total != null) pageInfo.total = argV.total;
+
+	if (Object.keys(pageInfo).length > 0) {
+		return pageInfo;
+	}
+
+    return undefined;
+}
+
+/**
  * Run a given async method with arguments, and output to log all inputs, outputs and progress updates.
  * @param method Async method to run
  * @param name Name of the method
@@ -71,8 +91,21 @@ export default async function asyncMethodTester<T extends ConfigArgs>(method: (a
             }
         }));
 
-        console.log();
+        console.log('');
         console.log(`Printed ${resultSummary(result)}.`);
+
+        const pageInfo = getPageInfo(argv);
+
+        if (pageInfo) {
+            console.log('');
+            console.log(`Pagination results:`);
+            for (const key of Object.keys(pageInfo)) {
+                if (ignoreList.indexOf(key) === -1) {
+                    const name = keyRename[key] ?? key;
+                    console.log(` - ${chalk.cyan(name)}: ${(pageInfo as any)[key]}`);
+                }
+            }
+        }
 
         if (argv.out) {
             await writeFile(argv.out, resultJson, { encoding: 'utf8' });

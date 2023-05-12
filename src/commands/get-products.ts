@@ -2,7 +2,7 @@ import { getCommerceAPI, CommonArgs, GetProductsArgs } from '@amplience/dc-integ
 import { Argv, Arguments, Options } from 'yargs';
 import asyncMethodTester from '../common/async-method-tester';
 import getConfig, { ConfigArgs } from '../common/config';
-import { commonCommandOptions } from '../common/command-options';
+import { commonCommandOptions, paginationCommandOptions } from '../common/command-options';
 import chalk from 'chalk'
 
 export const command = 'get-products <vendor>';
@@ -17,7 +17,8 @@ type GetProductsCommandArgs = CommonArgs & GetProductsArgs & ConfigArgs
 export const getProductsCommandOptions = {
     ...commonCommandOptions,
     productIds: { type: 'string', description: 'Comma separated IDs for products to fetch.' } as Options,
-    keyword: { type: 'string', description: 'Keyword to search for products.' } as Options
+    keyword: { type: 'string', description: 'Keyword to search for products.' } as Options,
+    ...paginationCommandOptions
 }
 
 /**
