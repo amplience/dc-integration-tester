@@ -42,7 +42,7 @@ export const builder = (yargs: Argv): void => {
  */
 export const handler = async (argv: Arguments<GetProductsCommandArgs>): Promise<void> => {
     if (argv.keyword == null && argv.productIds == null && argv.categoryId == null) {
-        console.log(chalk.red('Either keyword or productIds must be provided.'))
+        console.log(chalk.red('Either keyword, categoryId, or productIds must be provided.'))
         return;
     }
 
