@@ -55,9 +55,16 @@ This tool is useful for testing integrations with dc-integration-middleware and 
 }
 ```
 
+## Dependency versions
+
+This project has been tested with the following versions:
+
+- Node version `18.x`
+- NPM version `9.x`
+
 ## Use
 
--   `nvm use` (or `nvm use 16` on windows)
+-   `nvm use` (or `nvm use 18` on windows)
 -   `npm i`
 -   `npm run build`
 -   `npm link`
@@ -89,7 +96,7 @@ Options:
 
 When using this tool to aid in the development of demostore integrations, do the following:
 
--   `nvm use` (or `nvm use 14` on windows)
+-   `nvm use` (or `nvm use 18` on windows)
 -   `npm i`
 -   `npm i .../dc-integration-middleware`
     -   ...or whatever the local path is to the dc-integration-middleware.
