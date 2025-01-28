@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/amplience/dc-integration-tester/compare/v2.2.0...v2.3.0) (2025-01-28)
+
+
+### Features
+
+* bump integration middleware to include scayle integration ([#7](https://github.com/amplience/dc-integration-tester/issues/7)) ([a154c4a](https://github.com/amplience/dc-integration-tester/commit/a154c4aec275121f3f38e32bb2a5aec47002cbc3))
+
 ## [2.2.0](https://github.com/amplience/dc-integration-tester/compare/v1.1.1...v2.2.0) (2023-09-12)
 
 
