@@ -7,7 +7,7 @@ import chalk from 'chalk'
 
 export const command = 'get-products <vendor>';
 
-export const desc = 'Gets a products from the given vendor';
+export const desc = 'Get products from the given vendor';
 
 /**
  * Arguments for get-products command.

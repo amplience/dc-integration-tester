@@ -59,8 +59,7 @@ This tool is useful for testing integrations with dc-integration-middleware and 
 
 This project has been tested with the following versions:
 
-- Node version `18.x`
-- NPM version `9.x`
+- Node version `20.x`
 
 ## Use
 
@@ -84,7 +83,7 @@ Commands:
   get-customer-groups <vendor>              vendor
   dc-integration-tester get-product         Gets a product from the given vendor
   <vendor> <id>
-  dc-integration-tester get-products        Gets a products from the given
+  dc-integration-tester get-products        Gets products from the given
   <vendor>                                  vendor
 
 Options:
